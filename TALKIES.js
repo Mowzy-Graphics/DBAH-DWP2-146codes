@@ -46,32 +46,9 @@
             if (nextBarcode) {
                 simulateBarcodeEntry(nextBarcode);
                 setTimeout(processNextBarcode, 400);
-            } else {
-                // All barcodes processed, show completion popup
-                showCompletionPopup();
             }
         }
-
-        // Function to show completion popup
-        function showCompletionPopup() {
-            const popup = document.createElement('div');
-            popup.innerHTML = 'Mouahahahahahah, tâche terminée !';
-            popup.style.position = 'fixed';
-            popup.style.top = '50%';
-            popup.style.left = '50%';
-            popup.style.transform = 'translate(-50%, -50%)';
-            popup.style.padding = '10px';
-            popup.style.background = '#ffffff';
-            popup.style.border = '1px solid #000000';
-            popup.style.boxShadow = '0 0 10px rgba(0, 0, 0, 0.5)';
-            document.body.appendChild(popup);
-
-            // Close the popup after 5 seconds (adjust as needed)
-            setTimeout(() => {
-                document.body.removeChild(popup);
-            }, 5000);
-        }
-
+        
         // Start processing the barcodes
         processNextBarcode();
     } else {
