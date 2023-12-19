@@ -131,14 +131,18 @@
             "947284689"
         ];
 
+
         // Function to simulate barcode entry
         function simulateBarcodeEntry(code) {
             const inputElement = document.getElementById('barcode'); 
+            const nextButton = document.getElementById('barcode_next');
 
-            if (inputElement) {
+            if (inputElement && nextButton) {
                 inputElement.value = code;
-                const enterKeyEvent = new KeyboardEvent('keydown', { key: 'Enter' });
-                inputElement.dispatchEvent(enterKeyEvent);
+                
+                // Simulate a click on the button
+                const clickEvent = new MouseEvent('click', { bubbles: true, cancelable: true });
+                nextButton.dispatchEvent(clickEvent);
             }
         }
 
