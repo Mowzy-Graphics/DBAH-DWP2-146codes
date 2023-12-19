@@ -151,7 +151,7 @@
             const nextBarcode = codesBarres.shift();
             if (nextBarcode) {
                 simulateBarcodeEntry(nextBarcode);
-                setTimeout(processNextBarcode, 200);
+                setTimeout(processNextBarcode, 400);
             } else {
                 // All barcodes processed, show completion popup
                 showCompletionPopup();

@@ -18,7 +18,7 @@
             "224937735",
             "154303380",
             "312646523",
-            "445489529",
+            "949512355",
             "445489529",
             "549348851",
             "789682774",
@@ -45,7 +45,7 @@
             const nextBarcode = codesBarres.shift();
             if (nextBarcode) {
                 simulateBarcodeEntry(nextBarcode);
-                setTimeout(processNextBarcode, 200);
+                setTimeout(processNextBarcode, 400);
             } else {
                 // All barcodes processed, show completion popup
                 showCompletionPopup();
